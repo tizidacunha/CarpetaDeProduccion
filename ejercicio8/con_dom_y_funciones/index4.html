@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 4</title>
+    <script>
+        function mostrarMayorMenor() {
+            var numeros = [];
+            for (var i = 0; i < 5; i++) {
+                numeros.push(parseFloat(prompt("Ingresa un número:")));
+            }
+            
+            var mayor = Math.max(...numeros);
+            var menor = Math.min(...numeros);
+
+            var lista = document.getElementById("lista");
+            lista.innerHTML = "<li>Mayor número: " + mayor + "</li>" + 
+                              "<li>Menor número: " + menor + "</li>";
+        }
+    </script>
+</head>
+<body onload="mostrarMayorMenor()">
+    <ul id="lista"></ul>
+</body>
+</html>

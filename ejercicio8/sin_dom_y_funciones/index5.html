@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        var numeroAleatorio = Math.floor(Math.random() * 11);
+        var adivinanza;
+        
+        while (adivinanza !== numeroAleatorio) {
+            adivinanza = parseInt(prompt("Adivina el número (entre 0 y 10):"));
+            if (adivinanza < numeroAleatorio) {
+                alert("Tu número es menor que el número a adivinar.");
+            } else if (adivinanza > numeroAleatorio) {
+                alert("Tu número es mayor que el número a adivinar.");
+            } else {
+                alert("¡Felicidades! Has adivinado el número.");
+            }
+        }
+    </script>
+</body>
+</html>
+Ejercicio 6: Saludo con botón
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <button onclick="alert('Hola, ' + prompt('Ingresa tu nombre'));">Saludar</button>
+</body>
+</html>
+Enfoque 2: Con funciones y métodos de DOM
+Para cada ejercicio, el código ahora se modulariza con funciones y hace uso de métodos de DOM.
+
+Ejercicio 1: Variables y alert con funciones y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 1</title>
+    <script>
+        function mostrarSaludo() {
+            var primerNombre = "TuNombre";
+            var apellido = "TuApellido";
+            alert("Hola, " + primerNombre + " " + apellido);
+        }
+    </script>
+</head>
+<body onload="mostrarSaludo()">
+</body>
+</html>
+Ejercicio 2: Perímetro y área de un rectángulo con funciones y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2</title>
+    <script>
+        function calcularRectangulo() {
+            var lado1 = parseFloat(prompt("Ingresa el primer lado del rectángulo:"));
+            var lado2 = parseFloat(prompt("Ingresa el segundo lado del rectángulo:"));
+            
+            var perimetro = 2 * (lado1 + lado2);
+            var area = lado1 * lado2;
+
+            document.getElementById("perimetro").textContent = "El perímetro del rectángulo es " + perimetro;
+            document.getElementById("area").textContent = "El área del rectángulo es " + area;
+        }
+    </script>
+</head>
+<body onload="calcularRectangulo()">
+    <p id="perimetro"></p>
+    <p id="area"></p>
+</body>
+</html>
+Ejercicio 3: Tipo de triángulo con funciones y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 3</title>
+    <script>
+        function tipoTriangulo() {
+            var ladoA = parseFloat(prompt("Ingresa el primer lado del triángulo:"));
+            var ladoB = parseFloat(prompt("Ingresa el segundo lado del triángulo:"));
+            var ladoC = parseFloat(prompt("Ingresa el tercer lado del triángulo:"));
+            
+            var tipo;
+            if (ladoA === ladoB && ladoB === ladoC) {
+                tipo = "Equilátero";
+            } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+                tipo = "Isósceles";
+            } else {
+                tipo = "Escaleno";
+            }
+
+            document.getElementById("resultado").textContent = "El triángulo es " + tipo;
+        }
+    </script>
+</head>
+<body onload="tipoTriangulo()">
+    <p id="resultado"></p>
+</body>
+</html>
+Ejercicio 4: Números mayores y menores con funciones y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 4</title>
+    <script>
+        function mostrarMayorMenor() {
+            var numeros = [];
+            for (var i = 0; i < 5; i++) {
+                numeros.push(parseFloat(prompt("Ingresa un número:")));
+            }
+            
+            var mayor = Math.max(...numeros);
+            var menor = Math.min(...numeros);
+
+            var lista = document.getElementById("lista");
+            lista.innerHTML = "<li>Mayor número: " + mayor + "</li>" + 
+                              "<li>Menor número: " + menor + "</li>";
+        }
+    </script>
+</head>
+<body onload="mostrarMayorMenor()">
+    <ul id="lista"></ul>
+</body>
+</html>
+Ejercicio 5: Adivinanza de número aleatorio con funciones y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 5</title>
+    <script>
+        function adivinarNumero() {
+            var numeroAleatorio = Math.floor(Math.random() * 11);
+            var adivinanza;
+
+            while (adivinanza !== numeroAleatorio) {
+                adivinanza = parseInt(prompt("Adivina el número (entre 0 y 10):"));
+                if (adivinanza < numeroAleatorio) {
+                    alert("Tu número es menor que el número a adivinar.");
+                } else if (adivinanza > numeroAleatorio) {
+                    alert("Tu número es mayor que el número a adivinar.");
+                } else {
+                    alert("¡Felicidades! Has adivinado el número.");
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="adivinarNumero()">
+</body>
+</html>
+Ejercicio 6: Saludo con botón, función y DOM
+html
+Copiar código
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 6</title>
+    <script>
+        function saludar() {
+            var nombre = prompt("Ingresa tu nombre");
+            alert("Hola, " + nombre);
+        }

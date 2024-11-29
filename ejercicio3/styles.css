@@ -1,0 +1,48 @@
+h1, h2{
+    color: blue;
+}
+
+h3{
+    color: orange;
+}
+
+
+.p1{
+    color: red;
+}
+.color1{
+    color: rgb(99, 18, 18);
+}
+
+
+.p2{
+    color: green;
+}
+.color2{
+    color: rgb(5, 34, 5);
+}
+
+
+.p3{
+    color: pink;
+}
+.color3{
+    color: rgb(82, 19, 29);
+}
+
+.p4{
+    color: rgb(73, 62, 73);
+}
+.color4{
+    color: purple;
+}
+.tipografia1{
+    font-style: italic;
+}
+
+.p5{
+    color: rgb(214, 16, 165);
+}
+.color5{
+    color: rgb(85, 21, 87);
+}

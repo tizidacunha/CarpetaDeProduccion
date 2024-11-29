@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 3</title>
+    <script>
+        function tipoTriangulo() {
+            var ladoA = parseFloat(prompt("Ingresa el primer lado del triángulo:"));
+            var ladoB = parseFloat(prompt("Ingresa el segundo lado del triángulo:"));
+            var ladoC = parseFloat(prompt("Ingresa el tercer lado del triángulo:"));
+            
+            var tipo;
+            if (ladoA === ladoB && ladoB === ladoC) {
+                tipo = "Equilátero";
+            } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+                tipo = "Isósceles";
+            } else {
+                tipo = "Escaleno";
+            }
+
+            document.getElementById("resultado").textContent = "El triángulo es " + tipo;
+        }
+    </script>
+</head>
+<body onload="tipoTriangulo()">
+    <p id="resultado"></p>
+</body>
+</html>

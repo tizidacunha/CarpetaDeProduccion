@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .prueba_4 {
+            display: none;
+        }
+        .horizontales{
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (min-width: 960px) {
+            .color {
+                background-color: yellow;
+            }
+        }
+        @media (max-width: 600px) {
+            .fuente {
+                font-size: 2rem;
+            }
+        
+        }
+        @media (orientation: portrait) {
+            .vertical {
+                display: none;
+            }
+        }
+        @media (orientation: landscape) {
+            .horizontal {
+                display: block;
+            }
+        }
+        @media (max-width: 768px) {
+            .columnas {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (min-width: 1200px) {
+            .espacio {
+                margin: 200px;
+            }
+        }
+        @media (max-width: 576px) {
+            h1,h2,h3,h4,h5{
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+        @media (max-width: 480px) {
+            .foto {
+                width: 20%;
+            }
+        }
+    </style>
+</head class="color">
+<body class="color "></body>
+    <header class="vertical"><h1>Titulo Princital</h1></header>
+    <main ><h2>TItulo Secundario</h2>
+    <p class="horizontal prueba_4">Textooooooooooooooooooooooooooooooooooo</p></main>
+   <div class="columnas horizontales">
+     <h3 class="espacio">Titulo 3</h3>
+     <h4 class="espacio">Titulo 4</h4>
+     <h5 class="espacio">Titulo 5</h5>
+   </div>
+   
+    <figure class="foto">
+        <img src="robot1.png" alt="" class="foto">
+        <img src="robot2.png" alt="" class="foto">
+    </figure>
+
+</body>
+</html>
