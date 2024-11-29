@@ -1,0 +1,198 @@
+/* Variables de Colores con Alto Contraste (AAA) */
+:root {
+    --color-primario: #1a5f7a;
+    --color-secundario: #2c3e50;
+    --color-acento: #e74c3c;
+    --color-texto: #2c3e50;
+    --color-fondo: #f8f9fa;
+    --color-blanco: #ffffff;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .marca {
+    font-family: 'Lora', serif;
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    background-color: var(--color-primario);
+    padding: 1rem 0;
+}
+
+.marca {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Sección Hero */
+.seccion-hero {
+    background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(26, 95, 122, 0.9)),
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200') center/cover;
+    min-height: 100vh;
+    color: var(--color-blanco);
+    padding-top: 80px;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.boton-principal {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #c0392b;
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+/* Sección Sobre Mí */
+.seccion-sobre-mi {
+    background-color: var(--color-fondo);
+}
+
+.titulo-seccion {
+    color: var(--color-secundario);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.imagen-perfil {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.etiqueta {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Sección Ejercicios */
+.tarjeta {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.contenedor-imagen {
+    overflow: hidden;
+}
+
+.contenedor-imagen img {
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .contenedor-imagen img {
+    transform: scale(1.05);
+}
+
+.titulo-ejercicio {
+    color: var(--color-secundario);
+    font-weight: 600;
+}
+
+.boton-ver {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+}
+
+.boton-ver:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Sección Contacto */
+.tarjeta-contacto {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.enlace-social {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.enlace-social:hover {
+    color: var(--color-acento);
+}
+
+/* Pie de Página */
+.pie-pagina {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Mejoras de Accesibilidad */
+:focus {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+}
+
+/* Skip to Main Content - Accesibilidad */
+.saltar-contenido {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+.saltar-contenido:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}
